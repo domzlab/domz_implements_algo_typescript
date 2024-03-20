@@ -12,7 +12,10 @@ adjacencyList[1] = [
 
 adjacencyList[2] = [
     {to: 1, weight: 1},
-    {to: 3, weight: 1}
+    {to: 3, weight: 1},
+    {to: 5, weight: 1},
+    {to: 7, weight: 1},
+    {to: 8, weight: 1},
 ];
 
 
@@ -69,7 +72,7 @@ function graphListToGraphMatrix(graphList: GraphNode[][]): number[][] {
         graphMatrix[i] = new Array(graphList.length).fill(-1);
     }
     
-    printGraphMatrix(graphMatrix)
+    // printGraphMatrix(graphMatrix)
     
     for(let i = 0; i < graphList.length; i++){
         if(graphList[i] !== undefined){
@@ -98,7 +101,7 @@ function printGraphMatrix(graphMatrix: number[][]): void {
         const valueSize = value.length;
         const maxValueSize = maxValue.length;
         
-        for(let i = 0; i < maxValueSize - valueSize; i++ ){
+        for(let i = 0; i < (maxValueSize - valueSize); i++ ){
             out.push(' ');
         }
         
